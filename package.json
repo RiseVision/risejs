@@ -1,0 +1,38 @@
+{
+  "name": "risejs",
+  "version": "1.5.0",
+  "license": "MIT",
+  "description": "Rise API wrapper with TypeScript definitions",
+  "keywords": [
+    "rise"
+  ],
+  "main": "dist/es5/index.js",
+  "browser": "dist/browser/index.js",
+  "types": "dist/es5/index.d.ts",
+  "bugs": {
+    "url": "https://github.com/risevision/risejs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/risevision/risejs"
+  },
+  "scripts": {
+    "package": "shx rm -rf ./dist/; tsc --outDir dist/es5 --target es5 -d && webpack",
+    "test": "mocha test/simpletest.ts"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "shx": "^0.3.2",
+    "ts-loader": "^6.0.2",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.2",
+    "uglifyjs-webpack-plugin": "0.4.3",
+    "webpack": "2.7.0"
+  },
+  "dependencies": {
+    "dpos-api-wrapper": "^1.4.0"
+  }
+}
