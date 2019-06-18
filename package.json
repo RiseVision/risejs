@@ -17,22 +17,26 @@
     "url": "https://github.com/risevision/risejs"
   },
   "scripts": {
+    "prettier": "prettier 'src/**/*.ts' --write",
     "package": "shx rm -rf ./dist/; tsc --outDir dist/es5 --target es5 -d && webpack",
     "test": "mocha test/simpletest.ts"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
+    "prettier": "^1.18.2",
     "shx": "^0.3.2",
     "ts-loader": "^6.0.2",
     "ts-node": "^8.2.0",
     "typescript": "^3.5.2",
     "uglifyjs-webpack-plugin": "0.4.3",
+    "utility-types": "^3.7.0",
     "webpack": "2.7.0"
   },
   "dependencies": {
-    "dpos-api-wrapper": "^1.4.0"
+    "axios": "^0.19.0"
   }
 }
