@@ -51,7 +51,7 @@ export const buildAPIObject = <T = any>(
     const definition = { ...DefaultRouteParams, ...route[routeName] };
     toRet[routeName] = (...args: any[]): Promise<any> => {
       let params = {};
-      if (definition.queryParamNames) {
+      if (definition.queryParamNames && definition.queryParamNames.length) {
         for (let i = 0; i < definition.queryParamNames.length; i++) {
           const paramName = definition.queryParamNames[i];
           const isOptional = paramName.endsWith("?");
